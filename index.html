@@ -471,7 +471,7 @@
   <h2 class="section-title">Open to New Opportunities</h2>
   <p>Actively seeking Technical Business Analyst roles in financial services, fintech, or enterprise software. Let's talk.</p>
   <div class="contact-links">
-    <a class="contact-link" href="/cdn-cgi/l/email-protection#dabbb4bbb6a3a9aef4bbb6b6bbb7aabbb6b6b39abdb7bbb3b6f4b9b5b7">✉️ <span class="__cf_email__" data-cfemail="d3b2bdb2bfaaa0a7fdb2bfbfb2bea3b2bfbfba93b4beb2babffdb0bcbe">[email&#160;protected]</span></a>
+    <a class="contact-link" href="mailto:analyst.allampalli@gmail.com">✉️ analyst.allampalli@gmail.com</a>
     <a class="contact-link" href="https://linkedin.com/in/allampalli" target="_blank">💼 linkedin.com/in/allampalli</a>
     <a class="contact-link" href="tel:+19087230676">📞 (908) 723-0676</a>
   </div>
@@ -484,7 +484,7 @@
   <div class="modal" id="modalContent"></div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Project data
 const projects = {
   excel: {
@@ -540,7 +540,7 @@ const projects = {
     meta: [['Format', 'Interactive HTML'], ['Swim Lanes', '5 Actors'], ['Process Steps', '24'], ['Decision Gates', '5']],
     fileType: 'html',
     fileLabel: '🎨 Open Process Diagram',
-    fileUrl: 'YOUR_GITHUB_PAGES_PROCESS_FLOW_URL_HERE',
+    fileUrl: 'https://analyst-allampalli.github.io/BA_Portfolio_Tools/process-flow-generator.html',
     hasPreview: true
   },
   app1: {
@@ -558,10 +558,7 @@ const projects = {
     meta: [['Built With', 'AI (Generative)'], ['Type', 'Web Application'], ['Time Saved', '~40% Faster Docs'], ['Status', '🟢 Active']],
     fileType: 'app',
     fileLabel: '🚀 Open App',
-    fileUrl: 'YOUR_CLAUDE_APP_URL_HERE',
-    hasPreview: false
-  },
-  app2: {
+    fileUrl: 'https://analyst-allampalli.github.io/BA_Portfolio_Tools/requirements-extractor.html', {
     icon: '✨', iconClass: 'icon-app',
     title: 'Process Flow Generator',
     subtitle: 'AI App · Process Documentation',
@@ -576,10 +573,7 @@ const projects = {
     meta: [['Built With', 'AI (Generative)'], ['Output', 'BPMN Diagrams + Docs'], ['Input', 'Plain English'], ['Status', '🟢 Active']],
     fileType: 'app',
     fileLabel: '🚀 Open App',
-    fileUrl: 'YOUR_CLAUDE_APP_URL_HERE',
-    hasPreview: false
-  }
-};
+    fileUrl: 'https://analyst-allampalli.github.io/BA_Portfolio_Tools/process-flow-generator.html',
 
 function openProject(id) {
   const p = projects[id];
@@ -663,4 +657,11 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 
 // Nav active on scroll
 const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', ()
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+});
+</script>
+</body>
+</html>
